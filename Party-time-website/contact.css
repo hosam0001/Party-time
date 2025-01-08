@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+
+
+:root {
+  --extra-color:#000;
+  --primary-color: #c4e4ee;
+  --text-light: #6b7280;
+  --extra-light: #A9C4EB;
+  --extra-dark: #e0ecff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient( var(--primary-color) , var(--extra-light));
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--extra-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0rem 0.7rem;
+  border: 6px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+
+.social{
+  .fa {
+    padding: 9px;
+    font-size: 30px;
+    width: 46px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 9px;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+}
+
+.fa-linkedin{
+  background: #095c9b;
+    color: white;
+}
+
+.fa-pinterest{
+  background: #9b0913;
+  color: white;
+}
+
+
+
+@media (width < 400px) {
+    nav .checkbox {
+      display: block;
+    }
+  
+    ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 85px);
+      left: -100%;
+      top: 140px;
+      background: linear-gradient( var( --extra-dark) , var(--extra-light));
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+  
+    nav #check:checked ~ ul {
+      left: 0;
+    }
+  
+    ul li a {
+      font-size: 1.25rem;
+    }
+} 
+
+.clear {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  z-index: -1;
+}
+.contact{
+  padding: 10px auto;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  
+  
+}
+.container .links, .sign-up {
+  width: 50%;
+ 
+  float: left;
+  margin: 0 auto;
+}
+
+.links div {
+  width: 50%;
+  float: left;
+  
+}
+.links ul {
+  display: block;
+}
+.links ul li{
+  margin: 10px 0;
+
+}
+.sign-up * {
+
+  margin: 10px 0;
+
+}
+.sign-up input {
+
+  width: 60%;
+  height: 5vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #333;
+
+}
+.sign-up .social i{
+
+  padding: 5px;
+}
+
+
+
+
+@media (max-width: 400px){
+  .container {
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .container .links{
+    width: 100%;
+  }
+  .links div {
+    width: 50%;
+    float: left;
+    
+  }
+
+  .links ul {
+    position: static;
+    
+    height: auto;
+    background: transparent ;
+  }
+  .sign-up {
+    width: 100%;
+    display: block;
+  }
+
+}
+
+
